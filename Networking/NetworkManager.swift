@@ -69,10 +69,10 @@ class NetworkManager {
         
         session.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
-                completion(image)
-//                DispatchQueue.main.async {
-//                    completion(image)
-//                }
+//                completion(image)
+                DispatchQueue.main.async {
+                    completion(image)
+                }
             }
         }.resume()
     }

@@ -15,15 +15,23 @@ enum Actions: String, CaseIterable {
     case ourCourses = "Our Courses"
     case uploadImage = "Upload Image"
     case downloadFile = "Download File"
+    case ourCoursesAlamofire = "Our Courses (Alamofire)"
+    case responseData = "responseData"
+    case responseString = "responseString"
+    case response = "response"
+    case downloadLargeImage = "Download Large Image"
+    case postAlamofire = "POST with Alamofire"
+    case putRequest = "PUT request with Alamofire"
 }
 
 private let reuseIdentifier = "Cell"
 private let url = "https://jsonplaceholder.typicode.com/posts"
+private let swiftbookApi = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
 private let uploadImage = "https://api.imgur.com/3/image"
 
 class MainViewController: UICollectionViewController {
     
-//    let actions = ["Download Image","GET","POST","Our Courses","Upload Image"]
+    //    let actions = ["Download Image","GET","POST","Our Courses","Upload Image"]
     let actions = Actions.allCases
     
     private var alert: UIAlertController!
@@ -124,6 +132,48 @@ class MainViewController: UICollectionViewController {
         case .downloadFile:
             showAlert()
             dataProvider.startDownload()
+        case .ourCoursesAlamofire:
+            performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: self)
+        case .responseData:
+            performSegue(withIdentifier: "ResponseData", sender: self)
+            AlamofireNetworkRequest.responseData(url: swiftbookApi)
+        case .responseString:
+            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+        case .response:
+            AlamofireNetworkRequest.response(url: swiftbookApi)
+        case .downloadLargeImage:
+            performSegue(withIdentifier: "LargeImage", sender: self)
+        case .postAlamofire:
+            performSegue(withIdentifier: "PostRequest", sender: self)
+        case .putRequest:
+            performSegue(withIdentifier: "PutRequest", sender: self)
+        }
+    }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let coursesVC = segue.destination as? CoursesViewController
+        let imageVC = segue.destination as? ImageViewController
+        
+        switch segue.identifier {
+        case "OurCourses":
+            coursesVC?.fetchData()
+        case "OurCoursesWithAlamofire":
+            coursesVC?.fetchDataWithAlamofire()
+        case "ShowImage":
+            imageVC?.fetchImage()
+        case "ResponseData":
+            imageVC?.fetchDataWithAlamofire()
+        case "LargeImage":
+            imageVC?.downloadImageWithProgress()
+        case "PostRequest":
+            coursesVC?.postRequest()
+        case "PutRequest":
+            coursesVC?.putRequest()
+        default:
+            break
         }
     }
     
