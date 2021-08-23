@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		EA01801826B9617400B59844 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01801726B9617400B59844 /* NetworkManager.swift */; };
 		EA01801A26B9934D00B59844 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01801926B9934D00B59844 /* ImageProperties.swift */; };
 		EA01801C26B9983B00B59844 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA01801B26B9983B00B59844 /* DataProvider.swift */; };
+		EA099CE526CD62BF00FE93DD /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = EA099CE426CD62BF00FE93DD /* FacebookLogin */; };
+		EA099CE726CD62BF00FE93DD /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = EA099CE626CD62BF00FE93DD /* FacebookCore */; };
+		EA099CEB26CD6BDF00FE93DD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA099CEA26CD6BDF00FE93DD /* Extension.swift */; };
+		EA099CED26CD6CDF00FE93DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA099CEC26CD6CDF00FE93DD /* LoginViewController.swift */; };
+		EA099CEF26CD6EA100FE93DD /* WebsiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA099CEE26CD6EA100FE93DD /* WebsiteDescription.swift */; };
 		EA57C40826B8279800AC1D5B /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57C40726B8279800AC1D5B /* CoursesViewController.swift */; };
 		EA57C40A26B827A700AC1D5B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57C40926B827A700AC1D5B /* WebViewController.swift */; };
 		EA57C40C26B82A0A00AC1D5B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57C40B26B82A0A00AC1D5B /* Course.swift */; };
@@ -24,6 +29,7 @@
 		EA662B6526B4520600808625 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA662B6426B4520600808625 /* ImageViewController.swift */; };
 		EAC56EC226BAE6180065338D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAC56EC126BAE6180065338D /* Podfile */; };
 		EAC56EC426BAEDA80065338D /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */; };
+		EAEB8DB126D3BFEB006B5197 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB8DB026D3BFEB006B5197 /* UserProfileVC.swift */; };
 		FF37580EDB6639587736A1A2 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C5886D743C98F2BA76D8CE /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +41,10 @@
 		EA01801726B9617400B59844 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EA01801926B9934D00B59844 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		EA01801B26B9983B00B59844 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		EA099CE226CD5E9700FE93DD /* Networking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Networking.entitlements; sourceTree = "<group>"; };
+		EA099CEA26CD6BDF00FE93DD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EA099CEC26CD6CDF00FE93DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA099CEE26CD6EA100FE93DD /* WebsiteDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteDescription.swift; sourceTree = "<group>"; };
 		EA57C40726B8279800AC1D5B /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		EA57C40926B827A700AC1D5B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EA57C40B26B82A0A00AC1D5B /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -49,6 +59,7 @@
 		EA662B6426B4520600808625 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		EAC56EC126BAE6180065338D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
+		EAEB8DB026D3BFEB006B5197 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		F3C5886D743C98F2BA76D8CE /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -57,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA099CE526CD62BF00FE93DD /* FacebookLogin in Frameworks */,
+				EA099CE726CD62BF00FE93DD /* FacebookCore in Frameworks */,
 				FF37580EDB6639587736A1A2 /* Pods_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,22 +116,27 @@
 		EA662B4F26B440C200808625 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EA099CE226CD5E9700FE93DD /* Networking.entitlements */,
 				EA662B5026B440C200808625 /* AppDelegate.swift */,
 				EA662B5226B440C200808625 /* SceneDelegate.swift */,
-				EA01801726B9617400B59844 /* NetworkManager.swift */,
-				EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */,
-				EA01801B26B9983B00B59844 /* DataProvider.swift */,
+				EAEB8DB026D3BFEB006B5197 /* UserProfileVC.swift */,
+				EA099CEC26CD6CDF00FE93DD /* LoginViewController.swift */,
 				EA01801326B95EAF00B59844 /* MainViewController.swift */,
 				EA662B6426B4520600808625 /* ImageViewController.swift */,
 				EA57C40726B8279800AC1D5B /* CoursesViewController.swift */,
+				EA01801726B9617400B59844 /* NetworkManager.swift */,
+				EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */,
+				EA01801B26B9983B00B59844 /* DataProvider.swift */,
 				EA57C40B26B82A0A00AC1D5B /* Course.swift */,
 				EA01801926B9934D00B59844 /* ImageProperties.swift */,
 				EA57C40F26B831F600AC1D5B /* TableViewCell.swift */,
 				EA01801526B95ED500B59844 /* CollectionViewCell.swift */,
 				EA57C40926B827A700AC1D5B /* WebViewController.swift */,
+				EA099CEA26CD6BDF00FE93DD /* Extension.swift */,
 				EA662B5626B440C200808625 /* Main.storyboard */,
 				EA662B5926B440C400808625 /* Assets.xcassets */,
 				EA662B5B26B440C400808625 /* LaunchScreen.storyboard */,
+				EA099CEE26CD6EA100FE93DD /* WebsiteDescription.swift */,
 				EA662B5E26B440C400808625 /* Info.plist */,
 			);
 			path = Networking;
@@ -142,6 +160,10 @@
 			dependencies = (
 			);
 			name = Networking;
+			packageProductDependencies = (
+				EA099CE426CD62BF00FE93DD /* FacebookLogin */,
+				EA099CE626CD62BF00FE93DD /* FacebookCore */,
+			);
 			productName = Networking;
 			productReference = EA662B4D26B440C200808625 /* Networking.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +191,9 @@
 				Base,
 			);
 			mainGroup = EA662B4426B440C200808625;
+			packageReferences = (
+				EA099CE326CD62BE00FE93DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = EA662B4E26B440C200808625 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,15 +267,19 @@
 				EA01801A26B9934D00B59844 /* ImageProperties.swift in Sources */,
 				EA01801626B95ED500B59844 /* CollectionViewCell.swift in Sources */,
 				EAC56EC426BAEDA80065338D /* AlamofireNetworkRequest.swift in Sources */,
+				EA099CED26CD6CDF00FE93DD /* LoginViewController.swift in Sources */,
 				EA57C40C26B82A0A00AC1D5B /* Course.swift in Sources */,
 				EA57C41026B831F600AC1D5B /* TableViewCell.swift in Sources */,
 				EA01801826B9617400B59844 /* NetworkManager.swift in Sources */,
 				EA57C40A26B827A700AC1D5B /* WebViewController.swift in Sources */,
 				EA01801C26B9983B00B59844 /* DataProvider.swift in Sources */,
 				EA662B5126B440C200808625 /* AppDelegate.swift in Sources */,
+				EA099CEF26CD6EA100FE93DD /* WebsiteDescription.swift in Sources */,
+				EA099CEB26CD6BDF00FE93DD /* Extension.swift in Sources */,
 				EA662B6526B4520600808625 /* ImageViewController.swift in Sources */,
 				EA01801426B95EAF00B59844 /* MainViewController.swift in Sources */,
 				EA662B5326B440C200808625 /* SceneDelegate.swift in Sources */,
+				EAEB8DB126D3BFEB006B5197 /* UserProfileVC.swift in Sources */,
 				EA57C40826B8279800AC1D5B /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Networking/Networking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLX89AH7T8;
 				INFOPLIST_FILE = Networking/Info.plist;
@@ -419,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Networking/Networking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TLX89AH7T8;
 				INFOPLIST_FILE = Networking/Info.plist;
@@ -455,6 +486,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA099CE326CD62BE00FE93DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA099CE426CD62BF00FE93DD /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA099CE326CD62BE00FE93DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		EA099CE626CD62BF00FE93DD /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA099CE326CD62BE00FE93DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA662B4526B440C200808625 /* Project object */;
 }
