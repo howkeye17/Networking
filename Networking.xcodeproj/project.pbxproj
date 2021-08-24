@@ -30,6 +30,9 @@
 		EAC56EC226BAE6180065338D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAC56EC126BAE6180065338D /* Podfile */; };
 		EAC56EC426BAEDA80065338D /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */; };
 		EAEB8DB126D3BFEB006B5197 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB8DB026D3BFEB006B5197 /* UserProfileVC.swift */; };
+		EAEB8DB526D3EDC8006B5197 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB8DB426D3EDC8006B5197 /* UserProfile.swift */; };
+		EAEB8DB726D511D9006B5197 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAEB8DB626D511D9006B5197 /* GoogleService-Info.plist */; };
+		EAEB8DB926D51709006B5197 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB8DB826D51709006B5197 /* CurrentUser.swift */; };
 		FF37580EDB6639587736A1A2 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C5886D743C98F2BA76D8CE /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,9 @@
 		EAC56EC126BAE6180065338D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		EAEB8DB026D3BFEB006B5197 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		EAEB8DB426D3EDC8006B5197 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		EAEB8DB626D511D9006B5197 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EAEB8DB826D51709006B5197 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		F3C5886D743C98F2BA76D8CE /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +134,8 @@
 				EAC56EC326BAEDA80065338D /* AlamofireNetworkRequest.swift */,
 				EA01801B26B9983B00B59844 /* DataProvider.swift */,
 				EA57C40B26B82A0A00AC1D5B /* Course.swift */,
+				EAEB8DB426D3EDC8006B5197 /* UserProfile.swift */,
+				EAEB8DB826D51709006B5197 /* CurrentUser.swift */,
 				EA01801926B9934D00B59844 /* ImageProperties.swift */,
 				EA57C40F26B831F600AC1D5B /* TableViewCell.swift */,
 				EA01801526B95ED500B59844 /* CollectionViewCell.swift */,
@@ -137,6 +145,7 @@
 				EA662B5926B440C400808625 /* Assets.xcassets */,
 				EA662B5B26B440C400808625 /* LaunchScreen.storyboard */,
 				EA099CEE26CD6EA100FE93DD /* WebsiteDescription.swift */,
+				EAEB8DB626D511D9006B5197 /* GoogleService-Info.plist */,
 				EA662B5E26B440C400808625 /* Info.plist */,
 			);
 			path = Networking;
@@ -210,6 +219,7 @@
 			files = (
 				EA662B5D26B440C400808625 /* LaunchScreen.storyboard in Resources */,
 				EA662B5A26B440C400808625 /* Assets.xcassets in Resources */,
+				EAEB8DB726D511D9006B5197 /* GoogleService-Info.plist in Resources */,
 				EAC56EC226BAE6180065338D /* Podfile in Resources */,
 				EA662B5826B440C200808625 /* Main.storyboard in Resources */,
 			);
@@ -268,10 +278,12 @@
 				EA01801626B95ED500B59844 /* CollectionViewCell.swift in Sources */,
 				EAC56EC426BAEDA80065338D /* AlamofireNetworkRequest.swift in Sources */,
 				EA099CED26CD6CDF00FE93DD /* LoginViewController.swift in Sources */,
+				EAEB8DB926D51709006B5197 /* CurrentUser.swift in Sources */,
 				EA57C40C26B82A0A00AC1D5B /* Course.swift in Sources */,
 				EA57C41026B831F600AC1D5B /* TableViewCell.swift in Sources */,
 				EA01801826B9617400B59844 /* NetworkManager.swift in Sources */,
 				EA57C40A26B827A700AC1D5B /* WebViewController.swift in Sources */,
+				EAEB8DB526D3EDC8006B5197 /* UserProfile.swift in Sources */,
 				EA01801C26B9983B00B59844 /* DataProvider.swift in Sources */,
 				EA662B5126B440C200808625 /* AppDelegate.swift in Sources */,
 				EA099CEF26CD6EA100FE93DD /* WebsiteDescription.swift in Sources */,
@@ -357,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -412,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

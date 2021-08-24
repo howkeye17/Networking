@@ -7,8 +7,14 @@
 
 import UIKit
 import FBSDKLoginKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
+    
+    var ref: DatabaseReference!
+    
+    var userProfile: UserProfile?
     
     lazy var fbLoginButton: UIButton = {
         let loginButton = FBLoginButton()
@@ -18,7 +24,7 @@ class LoginViewController: UIViewController {
     }()
     
     lazy var customFBLoginButton: UIButton = {
-
+        
         let loginButton = UIButton()
         loginButton.backgroundColor = UIColor.blue
         loginButton.setTitle("Login with Facebook", for: .normal)
@@ -67,7 +73,7 @@ extension LoginViewController: LoginButtonDelegate {
         
         guard AccessToken.isCurrentAccessTokenActive else { return }
         
-        openMainViewController()
+        signIntoFirebase()
         
         print("Successfully logged in with Facebook....")
     }
@@ -94,8 +100,68 @@ extension LoginViewController: LoginButtonDelegate {
             
             if result.isCancelled { return }
             else {
-                self.openMainViewController()
+                self.signIntoFirebase()
             }
+        }
+    }
+    
+    private func signIntoFirebase() {
+        
+        let accessToken = AccessToken.current
+        
+        guard let accessTokenString = accessToken?.tokenString else { return }
+        
+        let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
+        
+        Auth.auth().signIn(with: credentials) { (user, error)  in
+            
+            if let error = error {
+                print("Something went wrong with our facebook user: ", error)
+                return
+            }
+            
+            print("Successfully logged in with our FB user.")
+            self.fetchFacebookfields()
+        }
+    }
+    
+    private func fetchFacebookfields() {
+        
+        GraphRequest(graphPath: "me", parameters: ["fields" : "id, name, email"]).start { (_, result, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let userData = result as? [String: Any] {
+                self.userProfile = UserProfile(data: userData)
+                print(userData)
+                print(self.userProfile?.name ?? "nil")
+                self.saveIntoFirebase()
+            }
+        }
+    }
+    
+    private func saveIntoFirebase() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+    
+        let userData = ["name" : userProfile?.name, "email" : userProfile?.email]
+        
+        let values = [uid : userData]
+        
+        ref = Database.database().reference()
+
+        ref.child("users").updateChildValues(values) { (error, _) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            print("Successfully saved user into Firebase database.")
+            self.openMainViewController()
         }
     }
     

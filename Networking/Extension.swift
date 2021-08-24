@@ -23,12 +23,13 @@ extension UIView {
 extension UIColor {
     convenience init? (hexValue: String, alpha: CGFloat) {
         if hexValue.hasPrefix("#") {
-            let scanner = Scanner(string: hexValue)
-            scanner.scanLocation = 1
+//            scanner.scanLocation = 1
+            let newHexValue = String(hexValue[hexValue.index(hexValue.startIndex, offsetBy: 1)])
+            let scanner = Scanner(string: newHexValue)
             
-            var hexInt32: UInt32 = 0
+            var hexInt32: UInt64 = 0
             if hexValue.count == 7 {
-                if scanner.scanHexInt32(&hexInt32) {
+                if scanner.scanHexInt64(&hexInt32) {
                     let red = CGFloat((hexInt32 & 0xFF0000) >> 16) / 255
                     let green = CGFloat((hexInt32 & 0x00FF00) >> 8) / 255
                     let blue = CGFloat(hexInt32 & 0x0000FF) / 255

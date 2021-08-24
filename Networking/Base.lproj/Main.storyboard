@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="biS-8z-Oyx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,16 +24,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LC8-Wf-ilJ">
+                                <rect key="frame" x="197" y="272.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dd1-0z-3GY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="Dd1-0z-3GY" firstAttribute="trailing" secondItem="nFP-1C-t4F" secondAttribute="trailing" constant="60" id="DXI-vd-tn2"/>
+                            <constraint firstItem="Dd1-0z-3GY" firstAttribute="trailing" secondItem="LC8-Wf-ilJ" secondAttribute="trailing" constant="197" id="AXr-Ug-m4n"/>
                             <constraint firstItem="nFP-1C-t4F" firstAttribute="leading" secondItem="Dd1-0z-3GY" secondAttribute="leading" constant="60" id="T1U-q6-gFu"/>
+                            <constraint firstItem="Dd1-0z-3GY" firstAttribute="trailing" secondItem="nFP-1C-t4F" secondAttribute="trailing" constant="60" id="Vf6-ex-uMp"/>
                             <constraint firstItem="nFP-1C-t4F" firstAttribute="top" secondItem="Dd1-0z-3GY" secondAttribute="top" constant="205" id="ar3-XQ-KAn"/>
+                            <constraint firstItem="LC8-Wf-ilJ" firstAttribute="leading" secondItem="Dd1-0z-3GY" secondAttribute="leading" constant="197" id="dkm-8j-0hs"/>
+                            <constraint firstItem="Dd1-0z-3GY" firstAttribute="bottom" secondItem="LC8-Wf-ilJ" secondAttribute="bottom" constant="520.5" id="xZg-Vq-MYD"/>
+                            <constraint firstItem="LC8-Wf-ilJ" firstAttribute="top" secondItem="Dd1-0z-3GY" secondAttribute="top" constant="228.5" id="zPR-gY-YbE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="b2X-Wk-aAE"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LC8-Wf-ilJ" id="X8I-fR-nWY"/>
+                        <outlet property="userNameLabel" destination="nFP-1C-t4F" id="zf3-nr-LtJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoO-hV-wwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
