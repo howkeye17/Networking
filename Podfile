@@ -6,4 +6,7 @@ target 'Networking'
 pod 'Alamofire', '~> 5.4'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'GoogleSignIn'
+
+
 

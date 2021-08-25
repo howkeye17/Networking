@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 class LoginViewController: UIViewController {
     
-    var ref: DatabaseReference!
+//    var ref: DatabaseReference!
     
     var userProfile: UserProfile?
     
@@ -37,6 +37,15 @@ class LoginViewController: UIViewController {
         return loginButton
     }()
     
+    lazy var signInWithEmail: UIButton = {
+       
+        let loginButton = UIButton()
+        loginButton.frame = CGRect(x: 32, y: 490, width: view.frame.width - 64, height: 28)
+        loginButton.setTitle("Sign In with Email", for: .normal)
+        loginButton.addTarget(self, action: #selector(openSignInVC), for: .touchUpInside)
+        return loginButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,8 +64,16 @@ class LoginViewController: UIViewController {
     private func setupViews() {
         view.addSubview(fbLoginButton)
         view.addSubview(customFBLoginButton)
+        view.addSubview(signInWithEmail)
     }
     
+    private func openMainViewController() {
+        dismiss(animated: true)
+    }
+    
+    @objc private func openSignInVC() {
+        performSegue(withIdentifier: "SignIn", sender: self)
+    }
     
 }
 
@@ -81,10 +98,6 @@ extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         
         print("User log out from Facebook...")
-    }
-    
-    private func openMainViewController() {
-        dismiss(animated: true)
     }
     
     @objc private func handleCustomFBLogin() {
@@ -146,14 +159,14 @@ extension LoginViewController: LoginButtonDelegate {
     private func saveIntoFirebase() {
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
-    
+        
         let userData = ["name" : userProfile?.name, "email" : userProfile?.email]
         
         let values = [uid : userData]
         
-        ref = Database.database().reference()
-
-        ref.child("users").updateChildValues(values) { (error, _) in
+        //        ref = Database.database().reference()
+        
+        Database.database().reference().child("users").updateChildValues(values) { (error, _) in
             
             if let error = error {
                 print(error)
